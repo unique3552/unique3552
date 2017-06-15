@@ -5,16 +5,24 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Insert title here</title>
 <script type="text/javascript">
 $(function(){	
-	$("#delete").click(function(){
-		var selectId = $(".selectId${memberDTO.id}").values();
+	$("#delete${man.id}").click(function(){
+		var selectId = $("#delete").attr("name");
 		
 		alert(selectId);
 		/* 
 		location.href="managementDelete?id="; */
-	});
+	})
 });
 </script>
 </head>
@@ -33,19 +41,19 @@ $(function(){
 			<td>가입날짜</td>
 			<td>가입승인여부</td>
 		</tr>
-		<c:forEach items="${list}" var="memberDTO">
+		<c:forEach items="${list}" var="man">
 			<tr>
-				<td>${memberDTO.id}</td>
-				<td>${memberDTO.name}</td>
-				<td>${memberDTO.birth}</td>
-				<td>${memberDTO.address}</td>
-				<td>${memberDTO.phone}</td>
-				<td>${memberDTO.email}</td>
-				<td>${memberDTO.grade}</td>
-				<td>${memberDTO.kind}</td>
-				<td>${memberDTO.joinDate}</td>
-				<td>${memberDTO.joinState}</td>
-				<td><input type="button" id="delete" name="${memberDTO.id}" value="X"></td>
+				<td>${man.id}</td>
+				<td>${man.name}</td>
+				<td>${man.birth}</td>
+				<td>${man.address}</td>
+				<td>${man.phone}</td>
+				<td>${man.email}</td>
+				<td>${man.grade}</td>
+				<td>${man.kind}</td>
+				<td>${man.joinDate}</td>
+				<td>${man.joinState}</td>
+				<td><input type="button" id="delete${man.id}" name="${man.id}" value="X"></td>
 			</tr>
 		</c:forEach>
 	</table>
