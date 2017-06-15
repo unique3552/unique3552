@@ -17,7 +17,7 @@
 <script type="text/javascript">
 $(function(){	
 	$("#delete${man.id}").click(function(){
-		var selectId = $("#delete").attr("name");
+		var selectId = $("#delete${man.id}").attr("name");
 		
 		alert(selectId);
 		/* 
@@ -40,7 +40,6 @@ $(function(){
 			<td>가입유형</td>
 			<td>가입날짜</td>
 			<td>가입승인여부</td>
-			<td>sub_4</td>
 		</tr>
 		<c:forEach items="${list}" var="man">
 			<tr>
