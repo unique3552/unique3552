@@ -41,6 +41,7 @@ $(function(){
 			<td>가입날짜</td>
 			<td>가입승인여부</td>
 		</tr>
+
 		<c:forEach items="${list}" var="man">
 			<tr>
 				<td>${man.id}</td>
