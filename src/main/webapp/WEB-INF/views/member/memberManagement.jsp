@@ -32,6 +32,7 @@ $(function(){
 			<td>가입유형</td>
 			<td>가입날짜</td>
 			<td>가입승인여부</td>
+			<td>가입승인여부</td>
 		</tr>
 		<c:forEach items="${list}" var="memberDTO">
 			<tr>
