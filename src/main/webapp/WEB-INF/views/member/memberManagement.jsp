@@ -15,9 +15,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <title>Insert title here</title>
 <script type="text/javascript">
-$(function(){	
-	$("#delete${man.id}").click(function(){
-		var selectId = $("#delete${man.id}").attr("name");
+$(function(){
+	$("delete").click(function(){
+		var selectId = $(this).attr("name");
 		
 		alert(selectId);
 		/* 
@@ -53,7 +53,7 @@ $(function(){
 				<td>${man.kind}</td>
 				<td>${man.joinDate}</td>
 				<td>${man.joinState}</td>
-				<td><input type="button" id="delete${man.id}" name="${man.id}" value="X"></td>
+				<td><input type="button" id="delete" name="${man.id}" value="X"></td>
 			</tr>
 		</c:forEach>
 	</table>
